@@ -1,0 +1,7 @@
+getsmdh.py: Get all CIAs recursively and extract SMDH. Last modified Aug 15 2016.
+
+padfirm.py: Pad FIRM to 4 MB (0x40000). Last modified Aug 24 2016.
+
+renametmd.py: Get all TMDs recursively and rename based on titlever. Last modified Feb 7 2017.
+
+smdhinfo.py: Show SMDH information. Last modified Aug 16 2016.

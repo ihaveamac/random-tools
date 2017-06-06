@@ -1,0 +1,3 @@
+Bruteforce seeds. Skips ones already downloaded. Originally made May 2016.
+
+Order of usage: getseeds.py, genseeddb.py, getinfo.py, gentable.py
