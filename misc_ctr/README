@@ -1,3 +1,5 @@
+get_titles.py: Get all TMDs recursively, add to a python dict and print. Was used for extra processing in other scripts. Last modified Jun 15 2017.
+
 getsmdh.py: Get all CIAs recursively and extract SMDH. Last modified Aug 15 2016.
 
 padfirm.py: Pad FIRM to 4 MB (0x40000). Last modified Aug 24 2016.
