@@ -55,10 +55,3 @@ for titleid in titles:
                 urlretrieve('http://nus.cdn.c.shop.nintendowifi.net/ccs/download/' + content_path, 'CDN/' + content_path)
             else:
                 print('')
-            if content_type & 2:
-                print('    ' + content_id + '.h3', end='   ')
-                if not os.path.isfile('CDN/' + content_path + '.h3'):
-                    print('downloading')
-                    urlretrieve('http://nus.cdn.c.shop.nintendowifi.net/ccs/download/' + content_path + '.h3', 'CDN/' + content_path + '.h3')
-                else:
-                    print('')
