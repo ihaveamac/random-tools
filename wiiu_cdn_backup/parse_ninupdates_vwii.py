@@ -38,11 +38,11 @@ for titleid in titles:
         with open('CDN/' + tmd_path, 'rb') as tmd:
             tmd.seek(0x1DE)
             content_count = struct.unpack('>H', tmd.read(0x2))[0]
-            tmd.seek(0xB04)
-            chunk_records = tmd.read(0x30 * content_count)
+            tmd.seek(0x1E4)
+            chunk_records = tmd.read(0x24 * content_count)
 
         # https://stackoverflow.com/questions/13673060/split-string-into-strings-by-length
-        chunks, chunk_size = len(chunk_records), 0x30
+        chunks, chunk_size = len(chunk_records), 0x24
         for chunk in [chunk_records[i:i + chunk_size] for i in range(0, chunks, chunk_size)]:
             content_id = binascii.hexlify(chunk[0:4]).decode('utf-8')
             content_type = struct.unpack('>H', chunk[6:8])[0]
