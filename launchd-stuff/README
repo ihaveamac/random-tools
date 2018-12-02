@@ -1,0 +1,1 @@
+A thing I made when playing with launchd sockets. A Python function that wraps around launch_activate_socket(3) and returns a list.
