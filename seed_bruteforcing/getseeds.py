@@ -37,8 +37,11 @@ def seed(uid):
 	else:
 		print("attempting:     %s\n" % uid_f, end='')
 		for regionStrings_index in range(len(regionStrings)):
-			ret = f(uid, regionStrings[regionStrings_index])
-			if ret == 1: break
+			try:
+				ret = f(uid, regionStrings[regionStrings_index])
+				if ret == 1: break
+			except Exception as e:
+				print('failed to get seed for %s %s: %s: %s' % (regionStrings[regionStrings_index], uid_f, type(e).__name__, e))
 
 def forloop(start, end):
 	for uid_r in range(start, end):
