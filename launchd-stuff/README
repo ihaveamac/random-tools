@@ -1,3 +1,5 @@
 launchdsocket is a thing I made when playing with launchd sockets. A Python function that wraps around launch_activate_socket(3) and returns a list.
 
 check-battery is a script I made that checks and logs the battery levels on macOS, and posts a notification when it's at "100%". The launchd agent runs it every 10 minutes (if you decide to actually use it, edit the paths for your own setup).
+
+load-launchd-env loads environment variables from a plist. Defaults to '~/.MacOSX/environment.plist', which used to be loaded by the system up to 10.7. It just calls `/bin/launchctl setenv` for all of them.
